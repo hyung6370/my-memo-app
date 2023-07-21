@@ -44,6 +44,43 @@ class ViewController: UIViewController {
     @objc func plusButtonTapped() {
         performSegue(withIdentifier: "ToDoCell", sender: nil)
     }
+    
+    // 삭제 확인(alert) 창을 보여주는 함수
+    func makeRemoveCheckAlert(completion: @escaping (Bool) -> Void) {
+        let alert = UIAlertController(title: "메모 삭제", message: "정말 메모를 지우시겠습니까?", preferredStyle: .alert)
+        let confirmAction = UIAlertAction(title: "확인", style: .default) { (_) in
+            completion(true)
+        }
+        let cancelAction = UIAlertAction(title: "취소", style: .cancel) { (_) in
+            completion(false)
+        }
+        alert.addAction(confirmAction)
+        alert.addAction(cancelAction)
+        present(alert, animated: true, completion: nil)
+    }
+    
+    // 버튼 눌림에 따라 삭제 확인(alert) 창 표시
+    func showDeleteConfirmation(indexPath: IndexPath) {
+        makeRemoveCheckAlert { [weak self] confirmed in
+            if confirmed {
+                // 확인 버튼이 눌리면 삭제 동작 수행
+                self?.deleteToDoItemAt(indexPath: indexPath)
+            }
+        }
+    }
+    
+    // 특정 IndexPath에 해당하는 ToDo 항목 삭제
+    func deleteToDoItemAt(indexPath: IndexPath) {
+        guard indexPath.row < toDoManager.getToDoListFromCoreData().count else {
+            return
+        }
+
+        let toDoData = toDoManager.getToDoListFromCoreData()[indexPath.row]
+        toDoManager.deleteToDo(data: toDoData) {
+            self.tableView.reloadData()
+        }
+    }
+    
 }
 
 extension ViewController: UITableViewDataSource {
@@ -61,6 +98,11 @@ extension ViewController: UITableViewDataSource {
         cell.updateButtonPressed = { [weak self] (senderCell) in
             // 뷰컨트롤러에 있는 세그웨이의 실행
             self?.performSegue(withIdentifier: "ToDoCell", sender: indexPath)
+        }
+        
+        cell.deleteButtonPressed = { [weak self] (senderCell: ToDoCell) in
+            guard let indexPath = tableView.indexPath(for: senderCell) else { return }
+            self?.showDeleteConfirmation(indexPath: indexPath)
         }
         
         cell.selectionStyle = .none

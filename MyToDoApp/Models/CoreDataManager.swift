@@ -103,16 +103,16 @@ final class CoreDataManager {
                     if let targetToDo = fetchedToDoList.first {
                         context.delete(targetToDo)
                         
-                        //appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
-                        if context.hasChanges {
-                            do {
-                                try context.save()
-                                completion()
-                            } catch {
-                                print(error)
-                                completion()
-                            }
-                        }
+                        appDelegate?.saveContext() // 앱델리게이트의 메서드로 해도됨
+//                        if context.hasChanges {
+//                            do {
+//                                try context.save()
+//                                completion()
+//                            } catch {
+//                                print(error)
+//                                completion()
+//                            }
+//                        }
                     }
                 }
                 completion()

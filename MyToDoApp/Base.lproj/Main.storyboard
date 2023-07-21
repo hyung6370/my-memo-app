@@ -35,7 +35,7 @@
                                                             <rect key="frame" x="10" y="10" width="323" height="89"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0BY-Ps-VXS" userLabel="To Do Text Label">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="49"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="323" height="53"/>
                                                                     <constraints>
                                                                         <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="qmE-R9-sfU"/>
                                                                     </constraints>
@@ -44,16 +44,16 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="6as-Tc-18q">
-                                                                    <rect key="frame" x="0.0" y="59" width="323" height="30"/>
+                                                                    <rect key="frame" x="0.0" y="63" width="323" height="26"/>
                                                                     <subviews>
                                                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-05-10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="B1M-hZ-1Q1" userLabel="Date Text Label">
-                                                                            <rect key="frame" x="0.0" y="13" width="78.666666666666671" height="17"/>
+                                                                            <rect key="frame" x="0.0" y="9" width="78.666666666666671" height="17"/>
                                                                             <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                             <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                             <nil key="highlightedColor"/>
                                                                         </label>
                                                                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h9O-0u-HD9" userLabel="Update Button">
-                                                                            <rect key="frame" x="253" y="4" width="70" height="26"/>
+                                                                            <rect key="frame" x="253" y="0.0" width="70" height="26"/>
                                                                             <constraints>
                                                                                 <constraint firstAttribute="height" constant="26" id="5of-Ws-qKe"/>
                                                                                 <constraint firstAttribute="width" constant="70" id="BQT-0D-Q0m"/>
@@ -66,14 +66,32 @@
                                                                                 <action selector="updateButtonTapped:" destination="q1m-4v-Dzt" eventType="touchUpInside" id="78j-0X-ePz"/>
                                                                             </connections>
                                                                         </button>
+                                                                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="eIR-hU-1eF" userLabel="Delete Button">
+                                                                            <rect key="frame" x="179" y="0.0" width="70" height="26"/>
+                                                                            <constraints>
+                                                                                <constraint firstAttribute="width" constant="70" id="Gfw-1i-rDB"/>
+                                                                                <constraint firstAttribute="height" constant="26" id="lMY-b1-DfO"/>
+                                                                            </constraints>
+                                                                            <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                                            <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                                            <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                            <state key="normal" title="DELETE" image="trash" catalog="system"/>
+                                                                            <connections>
+                                                                                <action selector="deleteButtonTapped:" destination="q1m-4v-Dzt" eventType="touchUpInside" id="297-0T-FGH"/>
+                                                                            </connections>
+                                                                        </button>
                                                                     </subviews>
                                                                     <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                     <constraints>
                                                                         <constraint firstItem="B1M-hZ-1Q1" firstAttribute="leading" secondItem="6as-Tc-18q" secondAttribute="leading" id="136-bC-kfN"/>
                                                                         <constraint firstAttribute="bottom" secondItem="B1M-hZ-1Q1" secondAttribute="bottom" id="1fX-hj-uU1"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="eIR-hU-1eF" secondAttribute="bottom" id="FUE-ga-T7m"/>
                                                                         <constraint firstAttribute="trailing" secondItem="h9O-0u-HD9" secondAttribute="trailing" id="IL1-kx-Pzq"/>
                                                                         <constraint firstAttribute="bottom" secondItem="h9O-0u-HD9" secondAttribute="bottom" id="M6N-TH-E19"/>
-                                                                        <constraint firstAttribute="height" constant="30" id="aGe-ib-9fz"/>
+                                                                        <constraint firstItem="h9O-0u-HD9" firstAttribute="leading" secondItem="eIR-hU-1eF" secondAttribute="trailing" constant="4" id="ms8-8D-VhV"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="eIR-hU-1eF" secondAttribute="bottom" id="pL7-kc-m1h"/>
+                                                                        <constraint firstItem="eIR-hU-1eF" firstAttribute="centerY" secondItem="6as-Tc-18q" secondAttribute="centerY" id="ufU-sc-aBO"/>
+                                                                        <constraint firstItem="h9O-0u-HD9" firstAttribute="leading" secondItem="eIR-hU-1eF" secondAttribute="trailing" constant="4" id="uva-vi-rym"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -98,6 +116,7 @@
                                         <connections>
                                             <outlet property="backView" destination="Pc8-te-KLu" id="7LT-ib-auQ"/>
                                             <outlet property="dateTextLabel" destination="B1M-hZ-1Q1" id="imc-4I-6ZS"/>
+                                            <outlet property="deleteButton" destination="eIR-hU-1eF" id="alP-dd-jta"/>
                                             <outlet property="toDoTextLabel" destination="0BY-Ps-VXS" id="elc-Gk-KHl"/>
                                             <outlet property="updateButton" destination="h9O-0u-HD9" id="VsG-R2-qGm"/>
                                         </connections>
@@ -205,7 +224,7 @@
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                 <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
                                 <state key="normal" title="SAVE">
-                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
                                 <connections>
                                     <action selector="saveButtonTapped:" destination="AXR-4H-qeT" eventType="touchUpInside" id="Whj-hZ-tST"/>
@@ -264,6 +283,7 @@
     </scenes>
     <resources>
         <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
         <systemColor name="labelColor">
             <color red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
