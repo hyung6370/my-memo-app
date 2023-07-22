@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		BD0EB6F72A6BC1DC00428D27 /* HeartTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EB6F52A6BC1DC00428D27 /* HeartTableViewCell.swift */; };
+		BD0EB6F82A6BC1DC00428D27 /* HeartTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BD0EB6F62A6BC1DC00428D27 /* HeartTableViewCell.xib */; };
+		BD0EB6FA2A6BC22500428D27 /* HeartListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD0EB6F92A6BC22500428D27 /* HeartListViewController.swift */; };
 		BD834BE92A66646B008FBC8C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD834BE82A66646B008FBC8C /* AppDelegate.swift */; };
 		BD834BEB2A66646B008FBC8C /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD834BEA2A66646B008FBC8C /* SceneDelegate.swift */; };
 		BD834BED2A66646B008FBC8C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BD834BEC2A66646B008FBC8C /* ViewController.swift */; };
@@ -24,6 +27,9 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		BD0EB6F52A6BC1DC00428D27 /* HeartTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartTableViewCell.swift; sourceTree = "<group>"; };
+		BD0EB6F62A6BC1DC00428D27 /* HeartTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HeartTableViewCell.xib; sourceTree = "<group>"; };
+		BD0EB6F92A6BC22500428D27 /* HeartListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeartListViewController.swift; sourceTree = "<group>"; };
 		BD834BE52A66646B008FBC8C /* MyToDoApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyToDoApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		BD834BE82A66646B008FBC8C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		BD834BEA2A66646B008FBC8C /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +98,7 @@
 			children = (
 				BD834BEC2A66646B008FBC8C /* ViewController.swift */,
 				BD834C0F2A669F97008FBC8C /* DetailViewController.swift */,
+				BD0EB6F92A6BC22500428D27 /* HeartListViewController.swift */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +107,8 @@
 			isa = PBXGroup;
 			children = (
 				BD834C0D2A669A12008FBC8C /* ToDoCell.swift */,
+				BD0EB6F52A6BC1DC00428D27 /* HeartTableViewCell.swift */,
+				BD0EB6F62A6BC1DC00428D27 /* HeartTableViewCell.xib */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -183,6 +192,7 @@
 			files = (
 				BD834BF82A66646E008FBC8C /* LaunchScreen.storyboard in Resources */,
 				BD834BF52A66646E008FBC8C /* Assets.xcassets in Resources */,
+				BD0EB6F82A6BC1DC00428D27 /* HeartTableViewCell.xib in Resources */,
 				BD834BF02A66646B008FBC8C /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -200,8 +210,10 @@
 				BD834BED2A66646B008FBC8C /* ViewController.swift in Sources */,
 				BD834BE92A66646B008FBC8C /* AppDelegate.swift in Sources */,
 				BD834C062A667B40008FBC8C /* UIColor+Extension.swift in Sources */,
+				BD0EB6F72A6BC1DC00428D27 /* HeartTableViewCell.swift in Sources */,
 				BD834C0A2A667DE3008FBC8C /* ToDoData+CoreDataProperties.swift in Sources */,
 				BD834C0C2A667E1C008FBC8C /* CoreDataManager.swift in Sources */,
+				BD0EB6FA2A6BC22500428D27 /* HeartListViewController.swift in Sources */,
 				BD834BEB2A66646B008FBC8C /* SceneDelegate.swift in Sources */,
 				BD834BF32A66646B008FBC8C /* MyToDoApp.xcdatamodeld in Sources */,
 				BD834C0E2A669A12008FBC8C /* ToDoCell.swift in Sources */,
