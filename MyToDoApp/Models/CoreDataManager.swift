@@ -49,7 +49,7 @@ final class CoreDataManager {
         return toDoList
     }
     
-    // MARK: - [Create] 코어데이터에 데이터 생성하기
+    // MARK: - [Create] 코어데이터에 데이터 생성하
     func saveToDoData(toDoText: String?, colorInt: Int64, completion: @escaping () -> Void) {
         // 임시저장소 있는지 확인
         if let context = context {

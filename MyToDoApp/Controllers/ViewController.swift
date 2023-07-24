@@ -11,6 +11,8 @@ class ViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+//    var heartedCells: [ToDoCell] = []
+    
     // 모델 (저장 데이터를 관리하는 코어데이터)
     let toDoManager = CoreDataManager.shared
     
@@ -18,6 +20,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         setupNaviBar()
         setupTableView()
+        
     }
     
     // 화면에 다시 진입할때마다 테이블뷰 리로드
@@ -27,7 +30,7 @@ class ViewController: UIViewController {
     }
     
     func setupNaviBar() {
-        self.title = "메모"
+        self.title = "Home"
         
         // 네비게이션바 우측에 Plus 버튼 만들기
         let plusButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(plusButtonTapped))
@@ -81,6 +84,12 @@ class ViewController: UIViewController {
         }
     }
     
+    // HeartedCellDelegate 메서드 구현
+//    func heartButtonTapped(cell: ToDoCell) {
+//        if !heartedCells.contains(cell) {
+//            heartedCells.append(cell)
+//        }
+//    }
 }
 
 extension ViewController: UITableViewDataSource {
@@ -120,10 +129,11 @@ extension ViewController: UITableViewDelegate {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "ToDoCell" {
             let detailVC = segue.destination as! DetailViewController
-            
+
             guard let indexPath = sender as? IndexPath else { return }
             detailVC.toDoData = toDoManager.getToDoListFromCoreData()[indexPath.row]
         }
+
     }
     
     // 테이블뷰의 높이를 자동적으로 추청하도록 하는 메서드

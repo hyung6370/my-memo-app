@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_12" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21679"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="126" id="KGk-i7-Jjw" customClass="HeartToDoCell" customModule="MyToDoApp" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="369" height="126"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="369" height="126"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="WJS-Zp-kuN" userLabel="Back View">
+                        <rect key="frame" x="25" y="10" width="319" height="106"/>
+                        <subviews>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="ckq-Dc-6o6">
+                                <rect key="frame" x="10" y="10" width="299" height="86"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="xXf-p1-NOC">
+                                        <rect key="frame" x="0.0" y="0.0" width="299" height="50"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" verticalCompressionResistancePriority="752" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="BSl-ah-Y4s" userLabel="To Do Text Label">
+                                                <rect key="frame" x="0.0" y="0.0" width="259" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" relation="greaterThanOrEqual" constant="50" id="jHp-EG-Awm"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <nil key="textColor"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="073-gf-Xf1" userLabel="Heart Button">
+                                                <rect key="frame" x="269" y="0.0" width="30" height="50"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="50" id="9VN-Wi-I0V"/>
+                                                    <constraint firstAttribute="width" constant="30" id="Tnh-qM-hnI"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="21"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" image="heart" catalog="system"/>
+                                                <connections>
+                                                    <action selector="heartButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Je6-5w-UXY"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                    </stackView>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IYi-Yp-CPV">
+                                        <rect key="frame" x="0.0" y="60" width="299" height="26"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2022-05-10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rMu-MH-x0i" userLabel="Date Text Label">
+                                                <rect key="frame" x="0.0" y="9" width="78.666666666666671" height="17"/>
+                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                                <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="get-EE-du8" userLabel="Update Button">
+                                                <rect key="frame" x="229" y="0.0" width="70" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="diY-wH-w5V"/>
+                                                    <constraint firstAttribute="width" constant="70" id="sej-8f-Oxe"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="UPDATE" image="pencil.tip" catalog="system"/>
+                                                <connections>
+                                                    <action selector="updateButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="cAo-Vk-XOH"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nfu-v2-XX2" userLabel="Delete Button">
+                                                <rect key="frame" x="155" y="0.0" width="70" height="26"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="26" id="V8t-r4-yp5"/>
+                                                    <constraint firstAttribute="width" constant="70" id="hmq-Td-cDd"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="system" pointSize="9"/>
+                                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                <state key="normal" title="DELETE" image="trash" catalog="system"/>
+                                                <connections>
+                                                    <action selector="deleteButtonTapped:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="wpN-vD-j9j"/>
+                                                </connections>
+                                            </button>
+                                        </subviews>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <constraints>
+                                            <constraint firstAttribute="bottom" secondItem="rMu-MH-x0i" secondAttribute="bottom" id="JAZ-uA-A2T"/>
+                                            <constraint firstItem="rMu-MH-x0i" firstAttribute="leading" secondItem="IYi-Yp-CPV" secondAttribute="leading" id="OXx-bp-tLj"/>
+                                            <constraint firstItem="get-EE-du8" firstAttribute="leading" secondItem="nfu-v2-XX2" secondAttribute="trailing" constant="4" id="VQD-xO-LdT"/>
+                                            <constraint firstAttribute="bottom" secondItem="get-EE-du8" secondAttribute="bottom" id="XA9-ny-pTl"/>
+                                            <constraint firstItem="get-EE-du8" firstAttribute="centerY" secondItem="IYi-Yp-CPV" secondAttribute="centerY" id="hl8-Px-Lcs"/>
+                                            <constraint firstAttribute="trailing" secondItem="get-EE-du8" secondAttribute="trailing" id="n6X-gq-XqA"/>
+                                            <constraint firstAttribute="bottom" secondItem="nfu-v2-XX2" secondAttribute="bottom" id="u7y-P0-NFc"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ckq-Dc-6o6" firstAttribute="leading" secondItem="WJS-Zp-kuN" secondAttribute="leading" constant="10" id="D6c-Xl-vCz"/>
+                            <constraint firstItem="ckq-Dc-6o6" firstAttribute="top" secondItem="WJS-Zp-kuN" secondAttribute="top" constant="10" id="gTf-XZ-4bu"/>
+                            <constraint firstAttribute="bottom" secondItem="ckq-Dc-6o6" secondAttribute="bottom" constant="10" id="l54-1z-gbR"/>
+                            <constraint firstAttribute="trailing" secondItem="ckq-Dc-6o6" secondAttribute="trailing" constant="10" id="rKb-0e-HdZ"/>
+                        </constraints>
+                    </view>
+                </subviews>
+                <constraints>
+                    <constraint firstAttribute="bottom" secondItem="WJS-Zp-kuN" secondAttribute="bottom" constant="10" id="7ye-wT-VOC"/>
+                    <constraint firstItem="WJS-Zp-kuN" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="Lha-GM-nF0"/>
+                    <constraint firstItem="WJS-Zp-kuN" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="25" id="T2h-x2-nK3"/>
+                    <constraint firstAttribute="trailing" secondItem="WJS-Zp-kuN" secondAttribute="trailing" constant="25" id="b07-AV-f14"/>
+                </constraints>
+            </tableViewCellContentView>
+            <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>
+            <connections>
+                <outlet property="backView" destination="WJS-Zp-kuN" id="DCh-rv-LFe"/>
+                <outlet property="dateTextLabel" destination="rMu-MH-x0i" id="S45-Yt-8hf"/>
+                <outlet property="deleteButton" destination="nfu-v2-XX2" id="vJ2-Q9-xGn"/>
+                <outlet property="heartButton" destination="073-gf-Xf1" id="sRE-DF-GlH"/>
+                <outlet property="toDoTextLabel" destination="BSl-ah-Y4s" id="PNk-Ia-NDr"/>
+                <outlet property="updateButton" destination="get-EE-du8" id="oyK-pg-pWq"/>
+            </connections>
+            <point key="canvasLocation" x="129.00763358778624" y="9.8591549295774659"/>
+        </tableViewCell>
+    </objects>
+    <resources>
+        <image name="heart" catalog="system" width="128" height="107"/>
+        <image name="pencil.tip" catalog="system" width="99" height="128"/>
+        <image name="trash" catalog="system" width="117" height="128"/>
+    </resources>
+</document>
